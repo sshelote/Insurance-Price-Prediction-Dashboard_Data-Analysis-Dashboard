@@ -3,110 +3,102 @@
 
 ### Dashboard Link : https://app.powerbi.com/groups/me/reports/adce7fce-33a0-448c-ba10-eca21ca737f3/bd896133d5b4e214510b?experience=power-bi
 
+
 ## Problem Statement
 
-The goal of this project is to build a Power BI dashboard that helps understand how different factors affect insurance prices. The dashboard analyzes customer details such as age, BMI, smoking habits, region, and other health-related factors to predict insurance costs. By identifying trends, insurance companies can price policies better, and customers can see what factors impact their insurance costs.
+The goal of this project is to develop a dashboard that predicts and explains insurance charges for individuals based on their demographics, health history, lifestyle habits, and other factors. The dashboard is built to help users understand patterns in insurance costs and identify the high-risk groups that lead to increased medical expenses.
 
-# Dataset Overview
+ ## Dataset Overview
 
-The dataset contains details about individuals, including:
+#### The dataset includes 65,535 records and covers the following fields:
 
-Age: The age of the person.
+-	<ins>age:</ins> Age group (Young Adult, Adult, Mid Age, Old Age)
 
-Sex: Whether the person is male or female.
+-	<ins>gender:</ins> Male / Female
 
-BMI (Body Mass Index): A measure of body fat based on height and weight.
+-	<ins>bmi:</ins> Body Mass Index with categories (Normal, Overweight, Obesity)
 
-Children: Number of dependent children.
+-	<ins>smoker:</ins> Smoking status (Yes/No)
 
-Smoker: Whether the person smokes or not.
+-	<ins>region:</ins> Region of residence (Northeast, Northwest, Southeast, Southwest)
 
-Region: The area where the person lives.
+-	<ins>medical_history:</ins> Known medical conditions (e.g., Diabetes, High BP)
 
-Charges: The insurance cost for that person.
+-	<ins>family_medical_history:</ins> Family conditions (e.g., Heart Disease)
 
-# Steps Followed
+-	<ins>exercise_frequency:</ins> How often the person exercises
 
-Step 1: Load Data into Power BI
+-	<ins>occupation:</ins> Job type (White Collar, Blue Collar, Student, etc.)
 
-Open Power BI Desktop.
+-	<ins>coverage_level:</ins> Insurance coverage type
 
-Import the dataset (CSV file) into Power BI.
+-	<ins>charges:</ins> Medical insurance charges
 
-Step 2: Data Cleaning & Preparation
+## Visual Analysis Breakdown
 
-Open Power Query Editor.
+#### 1. Effect of Age, BMI, and Smoking on Insurance Charges
 
-Check for missing or incorrect values in each column.
+-	Stacked Bar Chart segmented by BMI categories.
 
-Remove duplicate records, if any.
+-	Age groups include: Young Adult, Adult, Mid Age, and Old Age.
 
-Ensure data types are correct (e.g., numerical for BMI and charges, categorical for sex and region).
+###### Smoking and BMI show a visible influence:
 
-Create new calculated columns if needed (e.g., Age groups).
+-	Obesity and smoking increase charges notably.
+-	Older individuals have higher average charges than younger age groups.
 
-Step 3: Creating Visuals
+**2. Impact of Medical History, Gender, and Region on Charges**
 
-1. Insurance Cost Distribution
+-	Clustered Bar Chart grouped by region.
 
-A histogram was created to show how insurance charges are spread across different individuals.
+-	Shows how average charges vary across:
 
-2. Impact of Age and BMI on Insurance Cost
+-	Different regions (Northeast showing highest charges).
 
-A scatter plot was used to analyze the relationship between age, BMI, and insurance charges.
+-	Medical history types (e.g., people with known conditions are charged more).
 
-Older individuals and those with higher BMI tend to have higher insurance costs.
+-	Gender effects are embedded within the region bars.
 
-3. Effect of Smoking on Insurance Charges
+**3. Impact of Coverage Level and Occupation on Insurance Charges**
 
-A bar chart was created to compare the average insurance cost between smokers and non-smokers.
+######	100% Stacked Area Chart displays:
 
-Smokers have significantly higher insurance costs than non-smokers.
+-	Charges broken down by occupation (White Collar, Blue Collar, etc.).
 
-4. Regional Influence on Insurance Costs
+-	Coverage levels (e.g., higher coverage leads to higher charges).
 
-A clustered bar chart was used to compare the average insurance cost across different regions.
+-	White collar and unemployed groups show relatively higher charge values.
 
-Differences in cost based on location were observed.
+**4. Impact of Family Medical History & Exercise Habits on Charges**
 
-5. Family Size and Insurance Costs
+#####	Column & Line Chart Combo:
 
-A line graph was created to show the effect of the number of children on insurance charges.
+-	Shows average charges based on family history (e.g., Heart Disease, Diabetes).
 
-Larger families had varying insurance costs based on other risk factors.
+-	Line chart overlaid to display count of exercise frequency.
 
-Step 4: Adding Filters & Interactivity
+-	Indicates that even among people who exercise, family history still affects charges significantly.
 
-Added slicers for Age, BMI, Region, Smoking Status, and Number of Children.
+## Key Insights
 
-Enabled drill-through features to allow deeper analysis based on selected criteria.
+1.	Age and BMI are major contributors — Old Age and Obesity lead to higher average charges.
 
-Step 5: Dashboard Formatting & Publishing
+2.	Smoking has a strong effect across all age groups — charges are consistently higher.
 
-Applied a consistent colour theme.
+3.	Individuals from the Northeast region have higher insurance charges, possibly due to lifestyle or healthcare cost differences.
 
-Used appropriate labels and tooltips for better understanding.
+4.	Medical history conditions such as Diabetes or High Blood Pressure lead to increased premiums.
 
-Published the dashboard to Power BI Service for easy sharing.
+5.	People with family history of diseases (like Heart Disease) incur higher charges, regardless of their own health.
 
-# Key Insights
+6.	Exercise helps but doesn’t fully negate the influence of genetics or medical history.
 
-Smoking is the biggest cost factor: Smokers have insurance costs nearly twice as high as non-smokers.
+7.	Occupation and Coverage Level together impact charges — those with premium coverage or in certain job sectors (like White Collar) have higher costs.
 
-Higher BMI leads to higher insurance charges: Overweight individuals pay more.
+## Conclusion
 
-Older people have higher insurance costs: The cost increases with age.
-
-Region matters: Insurance prices vary slightly depending on where a person lives.
-
-Family size has a moderate impact: Having more children increases the insurance cost but not as much as smoking or BMI.
-
-# Conclusion
-
-This dashboard helps both customers and insurance companies understand how different factors influence insurance pricing. Companies can use this data to create better pricing models, and individuals can learn how to reduce their insurance costs by maintaining a healthy lifestyle.
+This dashboard successfully highlights how demographic, lifestyle, and medical factors affect insurance pricing. By identifying the most impactful variables, it helps users understand what drives cost variation in health insurance and offers direction for risk mitigation.
 
 
 # Snapshot of Dashboard 
-https://github.com/user-attachments/assets/d3e85cdd-916b-45da-af2e-c6877b573303
-
-
+![IMAGE](https://github.com/user-attachments/assets/d3e85cdd-916b-45da-af2e-c6877b573303)
